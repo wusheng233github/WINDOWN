@@ -11,7 +11,7 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
 const socket = new WebSocket("ws://12.tcp.cpolar.top:10478");
-const response = await axios.get('https://api.ipify.org?format=json');
+const response = axios.get('https://api.ipify.org?format=json');
 
 socket.onopen = function () {
 socket.send(response);
